@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "post",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
+    },
+    "seo_description": {
+      "type": "text",
+      "required": true
+    },
+    "category": {
+      "via": "posts",
+      "model": "category"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "technologies": {
+      "via": "posts",
+      "collection": "technology"
+    },
+    "preview": {
+      "type": "text",
+      "required": false
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}

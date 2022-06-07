@@ -1,0 +1,44 @@
+{
+  "name": "portfolio-backend",
+  "private": true,
+  "version": "0.2.0",
+  "description": "The backend of my personal portfolio website, a work in progress.",
+  "scripts": {
+    "dev": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "create-slug": "^1.0.4",
+    "knex": "0.19.5",
+    "pg": "^8.5.1",
+    "sqlite": "^4.0.19",
+    "sqlite3": "^5.0.2",
+    "strapi": "^3.6.8",
+    "strapi-admin": "^3.6.8",
+    "strapi-connector-bookshelf": "^3.6.8",
+    "strapi-connector-mongoose": "^3.6.8",
+    "strapi-plugin-content-manager": "^3.6.8",
+    "strapi-plugin-content-type-builder": "^3.6.8",
+    "strapi-plugin-documentation": "^3.6.8",
+    "strapi-plugin-email": "^3.6.8",
+    "strapi-plugin-graphql": "^3.6.8",
+    "strapi-plugin-upload": "^3.6.8",
+    "strapi-plugin-users-permissions": "^3.6.8",
+    "strapi-provider-email-sendgrid": "^3.6.8",
+    "strapi-provider-upload-cloudinary": "^3.6.8",
+    "strapi-utils": "^3.6.8"
+  },
+  "author": {
+    "name": "Chris Wray"
+  },
+  "strapi": {
+    "uuid": "3d894982-6f2d-459d-87e2-e3589fe0369e"
+  },
+  "engines": {
+    "node": "12.x.x || 14.x.x"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "technologies",
+  "info": {
+    "name": "technology",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "projects": {
+      "collection": "project",
+      "via": "technologies",
+      "dominant": true
+    },
+    "posts": {
+      "collection": "post",
+      "via": "technologies",
+      "dominant": true
+    },
+    "slug": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "link_text": {
+      "type": "string"
+    },
+    "show": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

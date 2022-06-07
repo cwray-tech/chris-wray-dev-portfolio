@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "main_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "technologies": {
+      "via": "projects",
+      "collection": "technology"
+    },
+    "introduction": {
+      "type": "text"
+    },
+    "image_caption": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
+    },
+    "category": {
+      "via": "projects",
+      "model": "category"
+    },
+    "preview": {
+      "type": "text",
+      "maxLength": 600,
+      "minLength": 400
+    },
+    "link": {
+      "type": "string"
+    },
+    "github": {
+      "type": "string"
+    }
+  }
+}

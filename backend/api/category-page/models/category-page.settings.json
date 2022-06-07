@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "category_pages",
+  "info": {
+    "name": "Category Page"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "text"
+    }
+  }
+}
